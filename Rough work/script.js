@@ -1,8 +1,13 @@
-const str = 'i have learned something new today';
+//Remove duplicates from an array
+
+let arrD = [1, 9, 15, 1, 78, 3, 48];
+
 (function () {
-    const arr = str.split(" ");
-    for (var i = 0; i < arr.length; i++) {
-        arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
-    }
-    console.log(arr.join(" "));
+  for (let i = 0; i < arrD.length; i++) {
+      if (arrD[i] == arrD[i + 1]) {
+          console.log(arrD[i+1]);
+          arrD.pop(arrD[i+1]);
+      }
+  }
+  console.log(arrD);
 })();
