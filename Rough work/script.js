@@ -1,10 +1,8 @@
-let arr = [31, 77, 45, 288, 19, 111,10];
-let oddArr = [];
-(function (arr) {
-    for (let i in arr) {
-        if (arr[i]%2!==0) {
-            oddArr.push(arr[i]);
-        }
+const str = 'i have learned something new today';
+(function () {
+    const arr = str.split(" ");
+    for (var i = 0; i < arr.length; i++) {
+        arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
     }
-})(arr);
-console.log(oddArr);
+    console.log(arr.join(" "));
+})();
