@@ -1,0 +1,463 @@
+Source: https://docs.google.com/document/d/1StwVzZTw37blvcD8HGVL8AB-6lsVfH3AwV1d9GxBopU/edit
+
+
+Do the below programs in anonymous function & IIFE
+
+Print odd numbers in an array
+
+Using anonymous function:
+
+let arr = [31, 77, 45, 288, 19, 111,10];
+let oddArr = [];
+let a = function (arr) {
+    for (let i in arr) {
+        if (arr[i]%2!==0) {
+            oddArr.push(arr[i]);
+        }
+    }
+};
+a(arr);
+console.log(oddArr);
+
+Output:
+[31, 77, 45, 19, 111]
+
+Using IIFE:
+
+let arr = [31, 77, 45, 288, 19, 111,10];
+let oddArr = [];
+(function (arr) {
+    for (let i in arr) {
+        if (arr[i]%2!==0) {
+            oddArr.push(arr[i]);
+        }
+    }
+})(arr);
+console.log(oddArr);
+
+Output:
+[31, 77, 45, 19, 111]
+
+Convert all the strings to title caps in a string array
+
+Using anonymous function:
+const str = 'i have learned something new today';
+let func = function () {
+    const arr = str.split(" ");
+    for (var i = 0; i < arr.length; i++) {
+        arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+    }
+    console.log(arr.join(" "));
+}
+func();
+
+Output:
+I Have Learned Something New Today
+
+Using IIFE:
+const str = 'i have learned something new today';
+(function () {
+    const arr = str.split(" ");
+    for (var i = 0; i < arr.length; i++) {
+        arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+    }
+    console.log(arr.join(" "));
+})();
+
+Output:
+I Have Learned Something New Today
+
+Sum of all numbers in an array
+
+Using anonymous function:
+
+let arr = [1,2,3,4,5];
+let count = 0;
+let arrFunc = function () {
+    for (let i in arr) {
+        count += arr[i];
+    }
+    console.log(count);
+};
+arrFunc();
+
+Output:
+15
+
+Using IIFE:
+
+let arr = [1,2,3,4,5];
+let count = 0;
+(function () {
+    for (let i in arr) {
+        count += arr[i];
+    }
+    console.log(count);
+})();
+
+Output:
+15
+
+Return all the prime numbers in an array
+
+Using anonymous function:
+
+let arr = [99,88,77,66,55,44,33,22,11];
+let arr2 = [];
+let primeArr = function () {
+    for (let i in arr) {
+        if (arr[i] % 2 !== 0) {
+            arr2.push(arr[i]);
+      }
+    }
+    console.log(arr2);  
+};
+primeArr();
+
+Output:
+[99, 77, 55, 33, 11]
+
+Using IIFE:
+
+let arr = [99,88,77,66,55,44,33,22,11];
+let arr2 = [];
+(function () {
+    for (let i in arr) {
+        if (arr[i] % 2 !== 0) {
+            arr2.push(arr[i]);
+      }
+    }
+    console.log(arr2);  
+})();
+
+Output:
+[99, 77, 55, 33, 11]
+
+
+Return all the palindromes in an array
+
+Using anonymous function:
+
+let str = "hello madam does your mom have racecar";
+let arr = str.split(" ");
+let arr2 = [];
+let palindrome ='';
+let func = function () {
+    for (let j in arr) {
+        palindrome = arr[j];
+        for (let i = 0; i < palindrome.length/2;i++) {
+            if (palindrome[i] == palindrome[palindrome.length - 1 - i]) {
+                arr2.push(palindrome);
+                break;
+            }
+            else {
+                break;
+            }
+        }
+    }
+    console.log(arr2);
+};
+func();
+
+Output:
+['madam', 'mom', 'racecar']
+
+Using IIFE:
+
+let str = "hello madam does your mom have racecar";
+let arr = str.split(" ");
+let arr2 = [];
+let palindrome ='';
+(function () {
+    for (let j in arr) {
+        palindrome = arr[j];
+        for (let i = 0; i < palindrome.length/2;i++) {
+            if (palindrome[i] == palindrome[palindrome.length - 1 - i]) {
+                arr2.push(palindrome);
+                break;
+            }
+            else {
+                break;
+            }
+        }
+    }
+    console.log(arr2);
+})();
+
+Output:
+['madam', 'mom', 'racecar']
+
+Return median of two sorted arrays of the same size.
+
+Using anonymous function:
+
+let arr = [1, 9, 15, 1, 78, 3, 48];
+let temp = 0;
+let sort = function () {
+  for (let i = 0; i < arr.length; i++) {
+    let swapped = false;
+    for (let j = 0; j < arr.length; j++) {
+      if (arr[j] > arr[j + 1]) {
+        let temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
+        swapped = true;
+      }
+    }
+    if (!swapped) break;
+  }
+  console.log(arr);
+};
+sort();
+
+Output:
+[1, 1, 3, 9, 15, 48, 78]
+
+Using IIFE:
+
+let arr = [1, 9, 15, 1, 78, 3, 48];
+let temp = 0;
+(function () {
+  for (let i = 0; i < arr.length; i++) {
+    let swapped = false;
+    for (let j = 0; j < arr.length; j++) {
+      if (arr[j] > arr[j + 1]) {
+        let temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
+        swapped = true;
+      }
+    }
+    if (!swapped) break;
+  }
+  console.log(arr);
+})();
+
+Output:
+[1, 1, 3, 9, 15, 48, 78]
+
+Remove duplicates from an array
+
+Using anonymous function:
+
+let arrD = [1, 9, 15, 1, 78, 3, 48];
+let count = 0;
+let arrDuplicate=function () {
+  for (let j = 0; j < arrD.length; j++) {
+    for (let i = j + 1; i < arrD.length; i++) {
+      if (arrD[j] == arrD[i]) {
+        arrD.splice(i, 1);
+      }
+    }
+  }
+  console.log(arrD);
+};
+arrDuplicate();
+
+Output:
+[1, 9, 15, 78, 3, 48]
+
+Using IIFE:
+
+let arrD = [1, 9, 15, 1, 78, 3, 48];
+let count = 0;
+(function () {
+  for (let j = 0; j < arrD.length; j++) {
+    for (let i = j+1; i < arrD.length; i++) {
+      if (arrD[j] == arrD[i]) {
+        arrD.splice(i,1);
+      }
+    }
+  }
+  console.log(arrD);
+})();
+
+Output:
+[1, 9, 15, 78, 3, 48]
+
+
+Rotate an array by k times
+
+Using anonymous function:
+
+let arrRotate = function (arr, n) {
+  let arrshifted = [];
+  for (let i = 0; i < n; i++) {
+    arrshifted.push(arr[arr.length-n+i]);
+  }
+  for (let j = 0; j < arr.length-n; j++) {
+    arrshifted.push(arr[j]);
+  }
+  return arrshifted;
+};
+console.log(arrRotate([1, 2, 3, 4, 5, 6, 7], 3));
+
+Output:
+[5, 6, 7, 1, 2, 3, 4]
+
+Using IIFE:
+
+(function (arr, n) {
+  let arrshifted = [];
+  for (let i = 0; i < n; i++) {
+    arrshifted.push(arr[arr.length-n+i]);
+  }
+  for (let j = 0; j < arr.length-n; j++) {
+    arrshifted.push(arr[j]);
+  }
+  console.log(arrshifted);
+})([1, 2, 3, 4, 5, 6, 7], 1);
+
+Output:
+[5, 6, 7, 1, 2, 3, 4]
+
+Arrow function:
+
+Print odd numbers in an array
+
+let arr = [31, 77, 45, 288, 19, 111,10];
+let oddArr = [];
+let a = (arr) =>{
+    for (let i in arr) {
+        if (arr[i]%2!==0) {
+            oddArr.push(arr[i]);
+        }
+    }
+};
+a(arr);
+console.log(oddArr);
+
+Output:
+[31, 77, 45, 19, 111]
+
+Convert all the strings to title caps in a string array
+
+const str = 'i have learned something new today';
+let func = ()=> {
+    const arr = str.split(" ");
+    for (var i = 0; i < arr.length; i++) {
+        arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+    }
+    console.log(arr.join(" "));
+}
+func();
+
+Output:
+I Have Learned Something New Today
+
+Sum of all numbers in an array
+
+let arr = [1,2,3,4,5];
+let count = 0;
+let arrFunc = () =>{
+    for (let i in arr) {
+        count += arr[i];
+    }
+    console.log(count);
+};
+arrFunc();
+
+Output:
+15
+
+Return all the prime numbers in an array
+
+let arr = [99,88,77,66,55,44,33,22,11];
+let arr2 = [];
+let primeArr = ()=> {
+    for (let i in arr) {
+        if (arr[i] % 2 !== 0) {
+            arr2.push(arr[i]);
+      }
+    }
+    console.log(arr2);  
+};
+primeArr();
+
+Output:
+[99, 77, 55, 33, 11]
+
+Return all the palindromes in an array
+
+let str = "hello madam does your mom have racecar";
+let arr = str.split(" ");
+let arr2 = [];
+let palindrome = "";
+let func = () => {
+  for (let j in arr) {
+    palindrome = arr[j];
+    for (let i = 0; i < palindrome.length / 2; i++) {
+      if (palindrome[i] == palindrome[palindrome.length - 1 - i]) {
+        arr2.push(palindrome);
+        break;
+      } else {
+        break;
+      }
+    }
+  }
+  console.log(arr2);
+};
+func();
+
+Output:
+['madam', 'mom', 'racecar']
+
+Return median of two sorted arrays of the same size.
+
+let arr = [1, 9, 15, 1, 78, 3, 48];
+let temp = 0;
+let sort = () => {
+  for (let i = 0; i < arr.length; i++) {
+    let swapped = false;
+    for (let j = 0; j < arr.length; j++) {
+      if (arr[j] > arr[j + 1]) {
+        let temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
+        swapped = true;
+      }
+    }
+    if (!swapped) break;
+  }
+  console.log(arr);
+};
+sort();
+
+Output:
+[1, 1, 3, 9, 15, 48, 78]
+
+Remove duplicates from an array
+
+let arrD = [1, 9, 15, 1, 78, 3, 48];
+let count = 0;
+let arrDuplicate = () => {
+  for (let j = 0; j < arrD.length; j++) {
+    for (let i = j + 1; i < arrD.length; i++) {
+      if (arrD[j] == arrD[i]) {
+        arrD.splice(i, 1);
+      }
+    }
+  }
+  console.log(arrD);
+};
+arrDuplicate();
+
+Output:
+[1, 9, 15, 78, 3, 48]
+
+Rotate an array by k times
+
+let arrRotate = (arr, n) => {
+  let arrshifted = [];
+  for (let i = 0; i < n; i++) {
+    arrshifted.push(arr[arr.length - n + i]);
+  }
+  for (let j = 0; j < arr.length - n; j++) {
+    arrshifted.push(arr[j]);
+  }
+  return arrshifted;
+};
+console.log(arrRotate([1, 2, 3, 4, 5, 6, 7], 3));
+
+Output:
+[5, 6, 7, 1, 2, 3, 4]

@@ -1,0 +1,210 @@
+Source: https://docs.google.com/document/d/1yFlthd1n3bwSAAUd1t-BEeygp_uM6J29TSKuCfBQ9-8/edit#
+
+
+Differences between Document and Window Objects
+
+Document Object: The document object represents a web page that is loaded in the browser. By accessing the document object, we can access the element in the HTML page. With the help of document objects, we can add dynamic content to our web page. The document object can be accessed with a window.document or just document.
+Syntax:
+document.property_name;
+Properties of document:
+activeElement: It returns the currently active elements in the document.
+body: It returns the contents of the body element.
+anchors: It returns all <a> elements that have a name attribute.
+baseURI: It returns a string value that represents the base URI of the document.
+cookie: It returns the cookie of the current document.
+charSet: It returns a string, representing the document’s character encoding.
+defaultView: It returns the current Window Object.
+designMode: It is used to set documents as editable or read-only.
+domain: It returns the domain name of the document server.
+doctype: It returns the document’s doctype.
+embeds: It returns the collection of all embedded elements.
+URL: It returns the complete URL of the document.
+forms: It returns all the elements of the form.
+fullScreenElement: It returns the element that is currently present in full-screen mode.
+title: It returns the title element of the document.
+head: It returns the head element of the document.
+links: It returns all <area> and <a> elements that have a href attribute.
+lastModified: It returns the date and time of the current document that was last modified.
+images: It returns the collection of <img> elements in the document.
+implementation: It returns the DOMImplementation object associated with the current document.
+readyState: It returns the loading status of the current document.
+referrer: It returns the URI of the page that is linked to the current page.
+scripts: It returns all script elements present in the document.
+strictErrorChecking: It sets or returns whether strict error checking can be enforced on a document or not.
+Methods of Document:
+Syntax:
+document.method_name;
+The lists of most commonly used methods are listed below:
+addEventListener(): It is used to attach an event handler to the specified element.
+adoptNode(): It is used to adopt a node from another document and it returns a node object, representing the adopted node.
+close(): It is used to close the output stream.
+createAttribute(): It is used to create an attribute node with the specified name and returns the attribute object.
+createComment(): It is used to create a comment node with some text.
+createDocumentFragment(): It is used to create the document fragment to change the content of the document.
+createElement(): It is used to create HTML element .
+createEvent(): It is used to create a new events object.
+createTextNode(): It is used to create a textnode.
+execCommand(): It is used to execute a command specified by the user on the editable selected section. It returns a Boolean value.
+fullscreenEnabled(): It is used to check whether the document can be viewed in fullscreen mode or not. It returns a boolean value.
+getElementById(): It returns the object of the given ID. If no object with that id exists then it returns null.
+getElementsByClassName(): It returns an object containing all the elements with the specified class names in the document as objects.
+getElementsByName(): It returns an object containing all the elements with the specified name in the document as objects.
+getElementsByTagName(): It returns an object containing all the elements with the specified tag names in the document as objects.
+hasFocus(): It returns a boolean value that indicates whether the document or element has focus or not.
+importNode(): It imports the copy of a node from another document in the current document.
+normalize(): It flushes out the empty nodes and merges the adjacent text nodes with the first text node and
+normalizeDocument(): It is used to normalize an HTML document by removing any empty text nodes and joining the adjacent text nodes.
+open(): It is used to open the output stream to collect the output.
+querySelector(): It returns the first element that matches a specified CSS selector(s) in the document.
+querySelectorAll(): It returns a collection of an element’s child elements that matches a specified CSS selector(s) in the document
+removeEventListener(): It removes the event handler from an element that has an attached event.
+renameNode(): It is used to rename the node.
+write(): It is used to write some content or javascript code in the document.
+writeln(): It is used to write a document with a newline character after each statement.
+
+
+Window Object
+The window object represents an open window in a browser. If a document contains frames (<iframe> tags), the browser creates one window object for the HTML document, and one additional window object for each frame.
+
+
+Window Object Properties
+Property
+Description
+closed
+Returns a boolean true if a window is closed.
+console
+Returns the Console Object for the window.
+See also The Console Object.
+defaultStatus
+Deprecated.
+document
+Returns the Document object for the window.
+
+
+frameElement
+Returns the frame in which the window runs.
+frames
+Returns all window objects running in the window.
+history
+Returns the History object for the window.
+See also The History Object.
+innerHeight
+Returns the height of the window's content area (viewport) including scrollbars
+innerWidth
+Returns the width of a window's content area (viewport) including scrollbars
+length
+Returns the number of <iframe> elements in the current window
+localStorage
+Allows to save key/value pairs in a web browser. Stores the data with no expiration date
+location
+Returns the Location object for the window.
+See also the The Location Object.
+name
+Sets or returns the name of a window
+navigator
+Returns the Navigator object for the window.
+See also The Navigator object.
+opener
+Returns a reference to the window that created the window
+outerHeight
+Returns the height of the browser window, including toolbars/scrollbars
+outerWidth
+Returns the width of the browser window, including toolbars/scrollbars
+pageXOffset
+Returns the pixels the current document has been scrolled (horizontally) from the upper left corner of the window
+pageYOffset
+Returns the pixels the current document has been scrolled (vertically) from the upper left corner of the window
+parent
+Returns the parent window of the current window
+screen
+Returns the Screen object for the window
+See also The Screen object
+screenLeft
+Returns the horizontal coordinate of the window relative to the screen
+screenTop
+Returns the vertical coordinate of the window relative to the screen
+screenX
+Returns the horizontal coordinate of the window relative to the screen
+screenY
+Returns the vertical coordinate of the window relative to the screen
+sessionStorage
+Allows to save key/value pairs in a web browser. Stores the data for one session
+scrollX
+An alias of pageXOffset
+scrollY
+An alias of pageYOffset
+self
+Returns the current window
+status
+Deprecated. Avoid using it.
+top
+Returns the topmost browser window
+
+
+
+Window Object Methods
+
+
+Method
+Description
+addEventListener()
+Attaches an event handler to the window
+alert()
+Displays an alert box with a message and an OK button
+atob()
+Decodes a base-64 encoded string
+blur()
+Removes focus from the current window
+btoa()
+Encodes a string in base-64
+clearInterval()
+Clears a timer set with setInterval()
+clearTimeout()
+Clears a timer set with setTimeout()
+close()
+Closes the current window
+confirm()
+Displays a dialog box with a message and an OK and a Cancel button
+focus()
+Sets focus to the current window
+getComputedStyle()
+Gets the current computed CSS styles applied to an element
+getSelection()
+Returns a Selection object representing the range of text selected by the user
+matchMedia()
+Returns a MediaQueryList object representing the specified CSS media query string
+moveBy()
+Moves a window relative to its current position
+moveTo()
+Moves a window to the specified position
+open()
+Opens a new browser window
+print()
+Prints the content of the current window
+prompt()
+Displays a dialog box that prompts the visitor for input
+removeEventListener()
+Removes an event handler from the window
+requestAnimationFrame()
+Requests the browser to call a function to update an animation before the next repaint
+resizeBy()
+Resizes the window by the specified pixels
+resizeTo()
+Resizes the window to the specified width and height
+scroll()
+Deprecated. This method has been replaced by the scrollTo() method.
+scrollBy()
+Scrolls the document by the specified number of pixels
+scrollTo()
+Scrolls the document to the specified coordinates
+setInterval()
+Calls a function or evaluates an expression at specified intervals (in milliseconds)
+setTimeout()
+Calls a function or evaluates an expression after a specified number of milliseconds
+stop()
+Stops the window from loading
+
+
+
+
+
