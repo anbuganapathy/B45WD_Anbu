@@ -102,37 +102,59 @@ Return all the prime numbers in an array
 
 Using anonymous function:
 
-let arr = [99,88,77,66,55,44,33,22,11];
-let arr2 = [];
-let primeArr = function () {
-    for (let i in arr) {
-        if (arr[i] % 2 !== 0) {
-            arr2.push(arr[i]);
+let isPrime = true;
+let number = 0;
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+let primeFunc = function (arr) {
+  for (let j = 0; j < arr.length; j++) {
+    number = arr[j];
+    for (let i = 2; i < number; i++) {
+      if (number % i == 0) {
+        isPrime = false;
+        break;
+      }
+      else {
+        isPrime = true;
       }
     }
-    console.log(arr2);  
-};
-primeArr();
+
+    if (isPrime) {
+      console.log(number);
+    }
+  }
+}
+primeFunc(arr);
+
 
 Output:
-[99, 77, 55, 33, 11]
-
+1 2 3 5 7 11 13 17 19
 Using IIFE:
 
-let arr = [99,88,77,66,55,44,33,22,11];
-let arr2 = [];
-(function () {
-    for (let i in arr) {
-        if (arr[i] % 2 !== 0) {
-            arr2.push(arr[i]);
+let isPrime = true;
+let number = 0;
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+(function (arr) {
+  for (let j = 0; j < arr.length; j++) {
+    number = arr[j];
+    for (let i = 2; i < number; i++) {
+      if (number % i == 0) {
+        isPrime = false;
+        break;
+      }
+      else {
+        isPrime = true;
       }
     }
-    console.log(arr2);  
-})();
+
+    if (isPrime) {
+      console.log(number);
+    }
+  }
+}
+)(arr);
 
 Output:
-[99, 77, 55, 33, 11]
-
+1 2 3 5 7 11 13 17 19
 
 Return all the palindromes in an array
 
@@ -362,20 +384,32 @@ Output:
 
 Return all the prime numbers in an array
 
-let arr = [99,88,77,66,55,44,33,22,11];
-let arr2 = [];
-let primeArr = ()=> {
-    for (let i in arr) {
-        if (arr[i] % 2 !== 0) {
-            arr2.push(arr[i]);
+let isPrime = true;
+let number = 0;
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+let primeFunc = (arr)=>{
+  for (let j = 0; j < arr.length; j++) {
+    number = arr[j];
+    for (let i = 2; i < number; i++) {
+      if (number % i == 0) {
+        isPrime = false;
+        break;
+      }
+      else {
+        isPrime = true;
       }
     }
-    console.log(arr2);  
-};
-primeArr();
+
+    if (isPrime) {
+      console.log(number);
+    }
+  }
+}
+primeFunc(arr);
+
 
 Output:
-[99, 77, 55, 33, 11]
+1 2 3 5 7 11 13 17 19
 
 Return all the palindromes in an array
 
@@ -461,3 +495,5 @@ console.log(arrRotate([1, 2, 3, 4, 5, 6, 7], 3));
 
 Output:
 [5, 6, 7, 1, 2, 3, 4]
+
+

@@ -6,7 +6,7 @@ https://github.com/
 https://interviewing.io/
 https://restcountries.com/v3.1/all
 https://jsonplaceholder.typicode.com/
-
+https://mockapi.io/
 
 
 
@@ -45,3 +45,6 @@ https://github.com/reach2arunprakash/javascript-101/tree/master/ppt
 https://github.com/rvsp/HTML-CSS/blob/master/Mini-tasks/003-JS-DOM.md
 https://medium.com/@reach2arunprakash/guvi-zen-class-javascript-warm-up-programming-problems-15973c74b87f
 https://medium.com/@reach2arunprakash/www-guvi-io-zen-d395deec1373
+https://medium.com/@reach2arunprakash/guvi-zen-class-find-the-culprits-and-nail-them-9ee6c67c44fb
+https://medium.com/@reach2arunprakash/www-guvi-io-zen-4fa483a7d359
+https://medium.com/@reach2arunprakash/guvi-zen-simple-debugging-tasks-adcdc2d3249d
