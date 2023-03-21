@@ -1,22 +1,16 @@
-let isPrime = true;
-let number = 0;
-let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
-let primeFunc = (arr)=>{
-  for (let j = 0; j < arr.length; j++) {
-    number = arr[j];
-    for (let i = 2; i < number; i++) {
-      if (number % i == 0) {
-        isPrime = false;
-        break;
-      }
-      else {
-        isPrime = true;
-      }
+let xhr = new XMLHttpRequest();
+xhr.open("GET", "https://restcountries.com/v3.1/all");
+xhr.send();
+xhr.onload = function () {
+  if (xhr.status == 200) {
+    let users = JSON.parse(xhr.response);
+    for (let i of users) {
+        if (i.hasOwnProperty("currencies")) {
+            if(i.currencies.hasOwnProperty("USD"))
+            console.log(i);
+      } 
     }
-
-    if (isPrime) {
-      console.log(number);
-    }
+  } else {
+    console.log(xhr.status);
   }
-}
-primeFunc(arr);
+};

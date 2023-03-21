@@ -1,0 +1,251 @@
+Source: https://docs.google.com/document/d/1Z_yaJ6qrsWo0CvoKiXANenLNWwpQqd-hRXBBvl8klv4/edit
+
+
+Class - Movie
+
+The class Movie is stated below. An instance of class Movie represents a film. This class has the following three properties:
+
+title, which is a String representing the title of the movie
+studio, which is a String representing the studio that made the movie
+rating, which is a String representing the rating of the movie (i.e. PG­13, R, etc)
+
+Write a constructor for the class Movie, which takes a String representing the title of the movie, a String representing the studio, and a String representing the rating as its arguments, and sets the respective class properties to these values.
+The constructor for the class Movie will set the class property rating to "PG" as default when no rating is provided.
+Write a method getPG, which takes an array of base type Movie as its argument, and returns a new array of only those movies in the input array with a rating of "PG". You may assume the input array is full of Movie instances. The returned array need not be full.
+Write a piece of code that creates an instance of the class Movie with the title “Casino Royale”, the studio “Eon Productions”, and the rating “PG­13”
+
+
+
+class Movie {
+  constructor(t, s, r) {
+    this.title = t;
+    this.studio = s;
+    this.rating = r;
+    if (this.rating == "" || this.rating == undefined) this.rating = "PG";
+  }
+  getPG(film) {
+    for (let i in film) {
+      if (film[i].rating=="PG") {
+        return film[i];
+      }
+    }
+  }
+}
+
+
+let film = new Movie("Casino Royale", "Eon Productions", "PG13");
+let movies = new Movie("Die another day", "MGM",);
+let arrObj = [film,movies];
+console.log(film.getPG(arrObj));
+
+
+
+
+Output:
+Movie {title: 'Die another day', studio: 'MGM', rating: 'PG'}
+
+Convert the UML diagram to Typescript class. - use number for double
+
+
+
+
+class Circle{
+  constructor(r, c) {
+    this.radius = r;
+    this.color = c;
+  }
+  getRadius() {
+    return this.radius;
+  }
+  setRadius(r) {
+    this.radius = r;
+  }
+  getColor() {
+    return this.color;
+  }
+  setColor(c) {
+    this.color = c;
+  }
+  toString() {
+    this.radius = this.radius.toString();
+    this.color = this.color.toString();
+  }
+  getArea() {
+    return Math.PI * Math.pow(this.radius,2);
+  }
+  getCircumference() {
+    return 2 * Math.PI * this.radius;
+  }
+}
+let c1 = new Circle(1.0, "red");
+console.log(c1.getRadius());
+c1.setRadius(2.0);
+console.log(c1.getColor());
+c1.setColor("Blue");
+console.log(c1.getArea());
+console.log(c1.getCircumference());
+c1.toString();
+console.log(c1.getRadius());
+console.log(c1.getColor());
+console.log(c1.getArea());
+console.log(c1.getCircumference());
+
+
+Output: 
+1
+red
+12.566370614359172
+12.566370614359172
+2
+Blue
+12.566370614359172
+12.566370614359172
+
+Write a “person” class to hold all the details.
+
+class Person{
+  constructor(fn,ln, a, g, m) {
+    this.firstName = fn;
+    this.lastName = ln;
+    this.age = a;
+    this.gender = g;
+    this.mobileNo = m;
+  }
+  getDetails() {
+    return `Name:${this.firstName + this.lastName } \nAge:${this.age} \nGender: ${this.gender} \nMobileNo: ${this.mobileNo}`;
+  }
+}
+let guys = new Person("Anbu", "Ganapathy", 30, "Male", 8012397879);
+console.log(guys.getDetails());
+
+
+Output:
+Name:AnbuGanapathy 
+Age:30 
+Gender: Male 
+MobileNo: 8012397879
+
+write a class to calculate the uber price.
+
+class UberPrice{
+  constructor(kms, amnt){
+    this.kilometers = kms;
+    this.amountperkm = amnt;
+  }
+  getBill(){
+    return `Total amount: ${this.kilometers * this.amountperkm} rupees`;
+  }
+}
+let person1 = new UberPrice(7, 10);
+console.log(person1.getBill());
+
+Output:
+Total amount: 70 rupees
+
+Array Methods
+
+Get all the countries from the Asia continent /region using the Filter function
+
+let xhr = new XMLHttpRequest();
+xhr.open("GET", "https://restcountries.com/v3.1/all");
+xhr.send();
+xhr.onload = function () {
+  if (xhr.status == 200) {
+    let users = JSON.parse(xhr.response);
+    console.log(
+      users.filter(function (value) {
+          if (value.region == "Asia" ) return value;
+      })
+    );
+  } else {
+    console.log(xhr.status);
+  }
+};
+
+
+
+
+Get all the countries with a population of less than 2 lakhs using Filter function
+
+let xhr = new XMLHttpRequest();
+xhr.open("GET", "https://restcountries.com/v3.1/all");
+xhr.send();
+xhr.onload = function () {
+  if (xhr.status == 200) {
+    let users = JSON.parse(xhr.response);
+    console.log(
+      users.filter(function (value) {
+        if (value.population < 200000) return value;
+      })
+    );
+  } else {
+    console.log(xhr.status);
+  }
+};
+
+
+
+
+Print the following details name, capital, flag using forEach function
+
+let xhr = new XMLHttpRequest();
+xhr.open("GET", "https://restcountries.com/v3.1/all");
+xhr.send();
+xhr.onload = function () {
+  if (xhr.status == 200) {
+    let users = JSON.parse(xhr.response);
+    users.forEach(value => {
+      console.log(value.name, value.capital, value.flag);
+    });
+  } else {
+    console.log(xhr.status);
+  }
+};
+
+
+
+Print the total population of countries using reduce function
+
+let xhr = new XMLHttpRequest();
+xhr.open("GET", "https://restcountries.com/v3.1/all");
+xhr.send();
+xhr.onload = function () {
+  if (xhr.status == 200) {
+    let users = JSON.parse(xhr.response);
+    console.log(
+      users.reduce(function (acc, currVal) {
+        acc +=currVal.population;
+         return acc;
+      },0)
+    );
+  } else {
+    console.log(xhr.status);
+  }
+};
+
+
+
+Output: 7777721563
+
+Print the country which uses US Dollars as currency.
+
+let xhr = new XMLHttpRequest();
+xhr.open("GET", "https://restcountries.com/v3.1/all");
+xhr.send();
+xhr.onload = function () {
+  if (xhr.status == 200) {
+    let users = JSON.parse(xhr.response);
+    for (let i of users) {
+        if (i.hasOwnProperty("currencies")) {
+            if(i.currencies.hasOwnProperty("USD"))
+            console.log(i);
+      }
+    }
+  } else {
+    console.log(xhr.status);
+  }
+};
+
+
+
+
