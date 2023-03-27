@@ -1,40 +1,48 @@
-/* .tables{
-border: 14px;
+table{
+    border: 2px solid black;
+    border-collapse: collapse;
 }
-.header{
-background-color: blue;
-color: white;
-text-align: center;
+tr{
+    height: 100px;
+    column-width: auto;
 }
-.body{
+th{
+    border: 2px solid black;
+    background-color: blue;
+    color: white;
+}
+td{
+    border: 2px solid black;
     background-color: red;
     color: white;
     text-align: center;
 }
-a:link{
-    color:green
+div{
+    border: 2px solid black;
+    text-align: center;
 }
-a:hover{
+div:hover{
+    background-color: burlywood;
+}
+p:hover{
+    color: white;
+}
+a:link{
     color: red;
 }
 a:visited{
     color: yellow;
 }
+a:hover{
+    color:green;
+}
 a:active{
-    color: blue;
+    color:orange
 }
-.div_1
-{
-    border: double;
-    border-color: black;
+div:relative{
+    position: relative;
+    back
 }
-.p_1:hover{
-background-color: red;
-color: green;
-font-size: 24px;
+button{
+    position: ab;
 }
-border-radius: 10px; */
-
-/* P:hover{
-    color: red;
-} */
