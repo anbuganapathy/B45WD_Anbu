@@ -49,3 +49,10 @@ https://medium.com/@reach2arunprakash/guvi-zen-class-find-the-culprits-and-nail-
 https://medium.com/@reach2arunprakash/www-guvi-io-zen-4fa483a7d359
 https://medium.com/@reach2arunprakash/guvi-zen-simple-debugging-tasks-adcdc2d3249d
 https://github.com/rvsp/HTML-CSS/blob/master/Mini-tasks/001-HTML.md
+
+
+Reference URLs:
+https://docs.google.com/spreadsheets/d/1mXBjIbNm-MgdZINOA7kc4WWmpJ-n9tkT/edit#gid=421369109
+https://docs.google.com/presentation/d/1oGrksam4sRAAnaGvUQkYPYYvip4whF1B/edit#slide=id.p30
+https://dzone.com/articles/21-object-oriented-and-system-design-problems-to-p
+https://interviewing.io/mocks

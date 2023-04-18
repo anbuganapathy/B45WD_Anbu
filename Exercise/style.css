@@ -1,48 +1,8 @@
-table{
-    border: 2px solid black;
-    border-collapse: collapse;
-}
-tr{
-    height: 100px;
-    column-width: auto;
-}
-th{
-    border: 2px solid black;
-    background-color: blue;
-    color: white;
-}
-td{
-    border: 2px solid black;
-    background-color: red;
-    color: white;
-    text-align: center;
-}
-div{
-    border: 2px solid black;
-    text-align: center;
-}
-div:hover{
-    background-color: burlywood;
-}
-p:hover{
-    color: white;
-}
-a:link{
-    color: red;
-}
-a:visited{
-    color: yellow;
-}
-a:hover{
-    color:green;
-}
-a:active{
-    color:orange
-}
-div:relative{
-    position: relative;
-    back
-}
-button{
-    position: ab;
-}
+p.dotted {outline-style: dotted;}
+p.dashed {outline-style: dashed;}
+p.solid {outline-style: solid;}
+p.double {outline-style: double;}
+p.groove {outline-style: groove;}
+p.ridge {outline-style: ridge;}
+p.inset {outline-style: inset;}
+p.outset {outline-style: outset;}
