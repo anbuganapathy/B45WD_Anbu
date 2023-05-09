@@ -1,0 +1,181 @@
+-- IMDB 
+-- Design a DB for IMDB 
+-- 1.Movie should have multiple media(Video or Image) 
+-- 2.Movie can belongs to multiple Genre 
+-- 3.Movie can have multiple reviews and Review can belongs to a user 
+-- 4.Artist can have multiple skills 
+-- 5.Artist can perform multiple role in a single film
+
+-- Database Creation:
+create database imdb;
+
+-- MOVIE table creation:
+CREATE TABLE `imdb`.`movie` (
+  `movie_id` INT NOT NULL,
+  `movie_name` VARCHAR(50) NOT NULL,
+  PRIMARY KEY (`movie_id`));
+
+-- values insertion into MOVIE table
+insert into imdb.movie values (1,"Avatar");
+insert into imdb.movie values (2,"The Chronicles of Narnia");
+insert into imdb.movie values (3,"Don't Breathe");
+insert into imdb.movie values (4,"Harry Potter");
+insert into imdb.movie values (5,"The Dark Knight-Batman Rises");
+insert into imdb.movie values (6,"Iron man");
+insert into imdb.movie values (7,"The Revenant");
+
+SELECT * FROM imdb.movie;
+
+-- Create MEDIA table for movies
+CREATE TABLE `imdb`.`media` (
+  `id` INT NOT NULL,
+  `movie_id` INT NOT NULL,
+  `media_file` BLOB NOT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `movie_id_idx` (`movie_id` ASC) VISIBLE,
+  CONSTRAINT `movie_id`
+    FOREIGN KEY (`movie_id`)
+    REFERENCES `imdb`.`movie` (`movie_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
+ALTER TABLE `imdb`.`media` 
+CHANGE COLUMN `media_file` `media_file` LONGBLOB NOT NULL ;
+
+-- values insertion into MEDIA table
+INSERT INTO `imdb`.`media` (`id`, `movie_id`, `media_file`) VALUES ('1', '1', 'C:/Users/anbug/Downloads/AvatarMv.jpg');
+INSERT INTO `imdb`.`media` (`id`, `movie_id`, `media_file`) VALUES ('2', '3', 'C:/Users/anbug/Downloads/dont_breathe_ver3.jpg');
+INSERT INTO `imdb`.`media` (`id`, `movie_id`, `media_file`) VALUES ('3', '7', 'C:/Users/anbug/Downloads/revenant_ver2.jpg.jpg');
+
+-- Table CREATION for GENRE
+
+CREATE TABLE `imdb`.`genre` (
+  `id` INT NOT NULL,
+  `movie` INT NULL,
+  `genre_name` VARCHAR(45) NULL,
+  PRIMARY KEY (`id`),
+  INDEX `movie_idx` (`movie` ASC) VISIBLE,
+  CONSTRAINT `movie`
+    FOREIGN KEY (`movie`)
+    REFERENCES `imdb`.`movie` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
+INSERT INTO `imdb`.`genre` (`id`, `movie`, `genre_name`) VALUES (2,,'Horror');
+INSERT INTO `imdb`.`genre` (`id`, `movie`, `genre_name`) VALUES (3,,'Drama');
+INSERT INTO `imdb`.`genre` (`id`, `movie`, `genre_name`) VALUES (4,,'Thriller');
+INSERT INTO `imdb`.`genre` (`id`, `movie`, `genre_name`) VALUES (5,,'Science fiction');
+INSERT INTO `imdb`.`genre` (`id`, `movie`, `genre_name`) VALUES (6,,'Romance');
+INSERT INTO `imdb`.`genre` (`id`, `movie`, `genre_name`) VALUES (7,,'Fantasy');
+INSERT INTO `imdb`.`genre` (`id`, `movie`, `genre_name`) VALUES (8,,'Comedy');
+INSERT INTO `imdb`.`genre` (`id`, `movie`, `genre_name`) VALUES (9,,'Adventure');
+INSERT INTO `imdb`.`genre` (`id`, `movie`, `genre_name`) VALUES (10,,'Animation');
+INSERT INTO `imdb`.`genre` (`id`, `movie`, `genre_name`) VALUES (11,,'Fantasy');
+INSERT INTO `imdb`.`genre` (`id`, `movie`, `genre_name`) VALUES (12,,'History');
+INSERT INTO `imdb`.`genre` (`id`, `movie`, `genre_name`) VALUES (13,,'Horror');
+INSERT INTO `imdb`.`genre` (`id`, `movie`, `genre_name`) VALUES (14,,'Thriller');
+INSERT INTO `imdb`.`genre` (`id`, `movie`, `genre_name`) VALUES (15,,'Fiction');
+
+
+
+UPDATE `imdb`.`genre` SET `movie` = '3' WHERE (`id` = '4');
+UPDATE `imdb`.`genre` SET `movie` = '7' WHERE (`id` = '7');
+UPDATE `imdb`.`genre` SET `movie` = '5' WHERE (`id` = '8');
+UPDATE `imdb`.`genre` SET `movie` = '2' WHERE (`id` = '9');
+UPDATE `imdb`.`genre` SET `movie` = '1' WHERE (`id` = '6');
+UPDATE `imdb`.`genre` SET `movie` = '1' WHERE (`id` = '5');
+UPDATE `imdb`.`genre` SET `movie` = '2' WHERE (`id` = '3');
+UPDATE `imdb`.`genre` SET `movie` = '3' WHERE (`id` = '2');
+
+
+CREATE TABLE `imdb`.`review` (
+  `id` INT NOT NULL,
+  `username` VARCHAR(50) NULL,
+  `movie_name` VARCHAR(50) NULL,
+  `comments` VARCHAR(50) NULL,
+  `rating` INT NULL,
+  PRIMARY KEY (`id`));
+
+INSERT INTO `imdb`.`review` (`id`, `username`,`movie_name`, `comments`,`rating`)
+ VALUES (1,'anbu','Avatar','Fantastic screenplay and great work by the director James Cameron',4.5);
+INSERT INTO `imdb`.`review` (`id`, `username`,`movie_name`, `comments`,`rating`)
+ VALUES (2,'kiruba','Avatar','Different science fiction story. Money worthy!',5);
+INSERT INTO `imdb`.`review` (`id`, `username`,`movie_name`, `comments`,`rating`)
+ VALUES (3,'John','Avatar','Cinematic experience of the new generation!',4.8);
+INSERT INTO `imdb`.`review` (`id`, `username`,`movie_name`, `comments`,`rating`)
+ VALUES (4,'Roobert','Avatar','Avatar (2009) is the most beautiful movie I have ever had the displeasure of watching.',4.2);
+
+SELECT * FROM imdb.review;
+
+CREATE TABLE `imdb`.`user` (
+  `id` INT NOT NULL,
+  `user_name` VARCHAR(50) NULL,
+  `email` VARCHAR(45) NULL,
+  PRIMARY KEY (`id`));
+
+INSERT INTO `imdb`.`user` (`id`, `user_name`, `email`) VALUES ('1', 'anbu', 'anbu@ymail.in');
+INSERT INTO `imdb`.`user` (`id`, `user_name`, `email`) VALUES ('2', 'aakash', 'aakash@gmail.com');
+INSERT INTO `imdb`.`user` (`id`, `user_name`, `email`) VALUES ('3', 'avinash', 'avinash@ymail.com');
+INSERT INTO `imdb`.`user` (`id`, `user_name`, `email`) VALUES ('4', 'yuktee', 'yuktee@gmail.com');
+INSERT INTO `imdb`.`user` (`id`, `user_name`, `email`) VALUES ('5', 'divya', 'divya@outlook.com');
+
+CREATE TABLE `imdb`.`artist` (
+  `id` INT NOT NULL,
+  `name` VARCHAR(45) NULL,
+  `movie_id` INT NULL,
+  `skill_id` INT NULL,
+  `role_id` INT NULL,
+  PRIMARY KEY (`id`));
+
+INSERT INTO `imdb`.`artist` (`id`, `name`, `movie_id`, `skill_id`, `role_id`) VALUES ('1', 'chris', '1', '1', '1');
+INSERT INTO `imdb`.`artist` (`id`, `name`, `movie_id`, `skill_id`, `role_id`) VALUES ('2', 'chris', '3', '2', '2');
+INSERT INTO `imdb`.`artist` (`id`, `name`, `movie_id`, `skill_id`, `role_id`) VALUES ('3', 'robert', '4', '1', '4');
+INSERT INTO `imdb`.`artist` (`id`, `name`, `movie_id`, `skill_id`, `role_id`) VALUES ('4', 'Alex', '2', '3', '2');
+INSERT INTO `imdb`.`artist` (`id`, `name`, `movie_id`, `skill_id`, `role_id`) VALUES ('5', 'Linda', '1', '5', '5');
+INSERT INTO `imdb`.`artist` (`id`, `name`, `movie_id`, `skill_id`, `role_id`) VALUES ('6', 'Ben', '5', '2', '3');
+
+
+CREATE TABLE `imdb`.`skills` (
+  `id` INT NOT NULL,
+  `skill_name` VARCHAR(45) NULL,
+  PRIMARY KEY (`id`));
+
+
+INSERT INTO `imdb`.`skills` (`id`, `skill_name`) VALUES ('1', 'Creativity');
+INSERT INTO `imdb`.`skills` (`id`, `skill_name`) VALUES ('2', 'Dancing');
+INSERT INTO `imdb`.`skills` (`id`, `skill_name`) VALUES ('3', 'timing');
+INSERT INTO `imdb`.`skills` (`id`, `skill_name`) VALUES ('4', 'act');
+INSERT INTO `imdb`.`skills` (`id`, `skill_name`) VALUES ('5', 'singing');
+INSERT INTO `imdb`.`skills` (`id`, `skill_name`) VALUES ('6', 'stunt');
+INSERT INTO `imdb`.`skills` (`id`, `skill_name`) VALUES ('7', 'camera');
+INSERT INTO `imdb`.`skills` (`id`, `skill_name`) VALUES ('8', 'romance');
+
+
+CREATE TABLE `imdb`.`role` (
+  `id` INT NOT NULL,
+  `role_name` VARCHAR(45) NULL,
+  PRIMARY KEY (`id`));
+
+
+  INSERT INTO `imdb`.`role` (`id`, `role_name`) VALUES ('1', 'Actor');
+INSERT INTO `imdb`.`role` (`id`, `role_name`) VALUES ('2', 'Co-Star');
+INSERT INTO `imdb`.`role` (`id`, `role_name`) VALUES ('3', 'Cameo');
+INSERT INTO `imdb`.`role` (`id`, `role_name`) VALUES ('4', 'Director');
+INSERT INTO `imdb`.`role` (`id`, `role_name`) VALUES ('5', 'Assistant Director');
+INSERT INTO `imdb`.`role` (`id`, `role_name`) VALUES ('6', 'Camera');
+INSERT INTO `imdb`.`role` (`id`, `role_name`) VALUES ('7', 'Assistant Camera ');
+INSERT INTO `imdb`.`role` (`id`, `role_name`) VALUES ('8', 'Actress');
+INSERT INTO `imdb`.`role` (`id`, `role_name`) VALUES ('9', 'Writer');
+INSERT INTO `imdb`.`role` (`id`, `role_name`) VALUES ('10', 'Art Director');
+INSERT INTO `imdb`.`role` (`id`, `role_name`) VALUES ('11', 'Costume Designer');
+INSERT INTO `imdb`.`role` (`id`, `role_name`) VALUES ('12', 'Editor');
+INSERT INTO `imdb`.`role` (`id`, `role_name`) VALUES ('13', 'Assistant Editor');
+INSERT INTO `imdb`.`role` (`id`, `role_name`) VALUES ('14', 'Makeup Artist');
+INSERT INTO `imdb`.`role` (`id`, `role_name`) VALUES ('15', 'Producer');
+INSERT INTO `imdb`.`role` (`id`, `role_name`) VALUES ('16', 'Choreographer');
+INSERT INTO `imdb`.`role` (`id`, `role_name`) VALUES ('17', 'Cinematographer');
+INSERT INTO `imdb`.`role` (`id`, `role_name`) VALUES ('18', 'Composer');
+INSERT INTO `imdb`.`role` (`id`, `role_name`) VALUES ('19', 'Costume Designer');
+INSERT INTO `imdb`.`role` (`id`, `role_name`) VALUES ('20', 'Visual Effects Supervisor');
+
+
