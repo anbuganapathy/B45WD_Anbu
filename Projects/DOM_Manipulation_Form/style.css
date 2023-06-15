@@ -1,0 +1,74 @@
+.Form {
+  height: 70%;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body {
+  height: 70%;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3%;
+  color: red;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+p {
+  margin-left: 8%;
+  text-align: justify;
+  font-weight: normal;
+}
+h1 {
+  color: green !important;
+  text-align: center;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.card {
+  width: 100%;
+  background-color: #f2f2f2;
+}
+label {
+  font-weight: bold;
+  color: blue !important;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+}
+
+textarea,
+select {
+  border: 3px solid #ccc !important;
+}
+
+.Form {
+  margin-bottom: 60px;
+}
+.btn-primary {
+  margin-left: 42%;
+}
+
+.form-select {
+  color: black !important;
+}
+
+.labelOptions {
+  color: black !important;
+}
+
+table{
+  border: 2px solid black;
+}
+
+th{
+  color: green !important;
+}
+td{
+  color: red !important;
+}
