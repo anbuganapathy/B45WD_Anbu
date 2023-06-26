@@ -1,3 +1,4 @@
+JavaScript - Day -7: Array methods
 Source: https://docs.google.com/document/d/1Z_yaJ6qrsWo0CvoKiXANenLNWwpQqd-hRXBBvl8klv4/edit
 
 

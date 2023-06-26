@@ -167,4 +167,17 @@
 //   document.getElementById("hexaDecimalValue").value = result.join('');
 // };
 
+let name,age;
+function print(callback){
+    name = prompt("Enter the name:");
+    age = prompt("Enter the age:");
+    callback();
+}
 
+
+function getDetails(){
+    console.log(name);
+    console.log(age);
+}
+
+print(getDetails);

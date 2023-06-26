@@ -1,3 +1,4 @@
+Database - MySQL
 -- IMDB 
 -- Design a DB for IMDB 
 -- 1.Movie should have multiple media(Video or Image) 

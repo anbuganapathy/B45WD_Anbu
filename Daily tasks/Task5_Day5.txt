@@ -1,3 +1,4 @@
+JavaScript - Day -5: ES5 vs ES6
 Source: https://docs.google.com/document/d/1StwVzZTw37blvcD8HGVL8AB-6lsVfH3AwV1d9GxBopU/edit
 
 

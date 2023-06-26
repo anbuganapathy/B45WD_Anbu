@@ -1,3 +1,4 @@
+React- Day -2 : React
 Task - Price cart bootstrap(https://startbootstrap.com/snippets/pricing-table)
 
 Front-end Source code

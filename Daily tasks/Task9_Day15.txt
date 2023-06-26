@@ -1,0 +1,10 @@
+DOM- Day -3 : Recap of Topics
+Pagination: https://docs.google.com/document/d/1O8yVCwB_GaY5rZK1_mNkZ9GeYJLeom_dYmcVN3Mb2ws/edit 
+HTML-Forms: https://docs.google.com/document/d/1I8qIE7_ri5Q_1QqkxJ7rdlRmGnWWW7zCa7BXrwAi8hI/edit 
+Calculator: https://docs.google.com/document/d/1VyZJG0KZAoZEs3h_lpP65XPekNqsbFp8bouOZSWsOTc/edit
+
+
+Front-end Source code : https://github.com/anbuganapathy/B45WD_Anbu/tree/master/Projects/Pagination_DOM_manipulation
+Front-end Deployed URL : https://coruscating-elf-60014f.netlify.app/#
+Front-end Source code : https://github.com/anbuganapathy/B45WD_Anbu/tree/master/Projects/Calculator
+Front-end Deployed URL : https://master--precious-horse-97d7b9.netlify.app/
