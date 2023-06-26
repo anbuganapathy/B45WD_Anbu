@@ -1,0 +1,43 @@
+.container{
+    margin-top:25px;
+}
+
+h1, .availableSeats{
+    text-align: center !important;
+}
+
+.header{
+margin-top: 30px;
+}
+
+.outer{
+    margin: auto;
+    width: 100%;
+    height: 600px;
+    border: 2px solid #000000;
+}
+
+.inner{
+    display: inline;
+}
+
+img{
+    border-radius: 50%;
+}
+label{
+    margin-bottom: 10px !important;
+    display: inline !important;
+}
+button{
+    margin-top: 10px;
+    margin-right: 60px !important;
+}
+
+.btn-outline-success{
+color: #fff !important;
+background-color: #198754 !important;
+}
+.btn-outline-danger{
+    color: #fff !important;
+background-color: #dc3545 !important;
+}

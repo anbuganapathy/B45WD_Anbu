@@ -1,0 +1,80 @@
+input[type=text] {
+    width: 100%;
+    padding: 2px 10px;
+    margin: 0px 30px 0px 2px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  input[type=email]{
+    width: 52%;
+    padding: 2px 10px;
+    margin: 0px 30px 0px 2px;
+    display: inline-block;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  .rating{
+    width: 100%;
+    margin: 16px 0px;
+  }
+  .userrating{
+    width: 100%;
+    margin: 6px 0px;
+  }
+  .satisfiedRating{
+    margin: 24px 0px;
+  }
+.fname,.lname{
+    display: inline-block;
+    /* padding:10px; */
+    margin: 2px 4px 2px 4px;
+}
+
+  form {
+    margin-top: 3%;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    padding: 20px;
+  }
+
+  .names{
+    display: inline-block;
+
+  }
+
+  tr{
+    align-items: center;
+  }
+
+  .star-rating{
+	font-size: 0;
+}
+.star-rating__wrap{
+	display: inline-block;
+	font-size: 1rem;
+}
+.star-rating__wrap:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+.star-rating__ico{
+	float: right;
+	padding-left: 2px;
+	cursor: pointer;
+	color: #FFB300;
+}
+.star-rating__ico:last-child{
+	padding-left: 0;
+}
+.star-rating__input{
+	display: none;
+}
+.star-rating__ico:hover:before,
+.star-rating__ico:hover ~ .star-rating__ico:before,
+.star-rating__input:checked ~ .star-rating__ico:before
+{
+	content: "\f005";
+}

@@ -1,174 +1,170 @@
-// let fs=require("fs");
-// const quote="Live more, worry less";
-// fs.writeFile("./sample.html",quote,(err)=>{
-//     console.log("created a html file");
+// let div1=document.createElement('div');
+// div1.setAttribute("class","imgClass");
+// document.body.append(div1);
+// let img=document.createElement('img');
+// img.setAttribute("src","https://images.unsplash.com/photo-1579353977828-2a4eab540b9a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c2FtcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
+// img.setAttribute("height","350px");
+// img.setAttribute("width","350px");
+// div1.append(img);
+
+// let div2=document.createElement('div');
+// document.body.append(div2);
+// let button=document.createElement('button');
+// button.setAttribute("onclick","imageResize()");
+// button.append(document.createTextNode("Image Resize"));
+// div2.append(button);
+
+// const imageResize=()=>{
+//   document.getElementsByClassName('imgClass');
+//   img.setAttribute("height","600px");
+//   img.setAttribute("width","1020px");
+//   div1.append(img);
+// }
+
+// window.addEventListener("click",()=>{
+//   document.getElementById("demo").innerHTML=Date();
+// });
+// // window.removeEventListener("keydown",()=>{
+// //   document.getElementById("demo").innerHTML=Date();
+// // });
+
+// let submitBtn = document.getElementById("submit");
+// submitBtn.addEventListener("keydown",()=>{
+//   document.getElementById("demo").innerHTML="";
 // })
 
-// for(let i=2;i<=10;i++){
-//     fs.writeFile(`./backup/text-${i}.html`,quote,(err)=>{
-//         console.log("created a html file");
-//     })
+// let btn3=document.createElement('Button');
+// btn3.appendChild(document.createTextNode("Red"));
+// btn3.setAttribute("onclick","bgChange('red')");
+// document.body.append(btn3);
+
+// let btn2=document.createElement('Button');
+// btn2.appendChild(document.createTextNode("Blue"));
+// btn2.setAttribute("onclick","bgChange('Blue')");
+// document.body.append(btn2);
+
+// let btn1=document.createElement('Button');
+// btn1.appendChild(document.createTextNode("Green"));
+// btn1.setAttribute("onclick","bgChange('Green')");
+// document.body.append(btn1);
+
+// const bgChange=(colour)=>{
+//   document.body.style.backgroundColor = colour;
+// }
+// let count=0;
+// let setTimer=setInterval(()=>{
+//   count++;
+//   document.getElementById('demo').innerHTML=count;
+//   if(count==20){
+//     clearInterval(setTimer);
+//   }
+// },1000);
+
+// let btn=document.getElementById("submit");
+// btn.setAttribute("onclick","clearInterval(setTimer)");
+// document.body.appendChild(btn);
+
+// let userName=prompt("Enter username");
+// let passWord=prompt("Enter password");
+// let res=confirm("Do you want to login?");
+// if(res)
+// alert("logged in successfully!!!");
+// else{
+//   alert("Signed out");
 // }
 
-// const quote="Good day!";
-// const[, ,n]=process.argv;
-// for(let i=1;i<=n;i++){
-//     fs.writeFile(`./backup/note-${i}.html`,quote,(err)=>{
-//         console.log("created a html file");
-//     })
+// let span=document.createElement('span');
+// span.setAttribute("id","spanValue");
+// let a=prompt("Enter your name:");
+// span.innerText=a;
+// document.body.appendChild(span);
+
+// let heading1=document.createElement('h1');
+// heading1.innerHTML="<p>I am a paragraph. I give a detailed information about a topic.</p>";
+// heading1.setAttribute("onclick","getMouseCoOrd(event)");
+// document.body.appendChild(heading1);
+
+// let span1=document.createElement('span');
+// span1.setAttribute("id","spanMouseCoOrd")
+// document.body.appendChild(span1);
+
+// let getMouseCoOrd=(event)=>{
+
+//   document.getElementById('spanMouseCoOrd');
+//   span1.innerText=`"X-CoOrdinate: ${event.pageX}, Y-CoOrdinate: ${event.pageY}"`;
+//   document.body.appendChild(span1);
 // }
 
-// fs.readdir("./backup",(err,files)=>{
-//     console.log("All file names:",files.length);
-//     var len=files.length;
-// })
+// let textArea=document.createElement('textarea');
+// textArea.setAttribute("id","tACharCount");
+// textArea.setAttribute("onkeydown","charCount()");
+// document.body.appendChild(textArea);
 
-// for(let i=1;i<=10;i++){
-// fs.unlink(`./backup/note-${i}.html`,(err)=>{
-// console.log("Successfully deleted.");
-// })
+// let charCount=()=>{
+//   let totalCount=document.getElementById("tACharCount").value;
+//   console.log(totalCount.length);
 // }
 
-// fs.unlink("./backup",(err)=>{
-// console.log("Successfully deleted.");
-// })
+// var x = document.createElement("hr");
+// document.body.appendChild(x);
 
-const products = [
-    {
-      createdAt: "2023-04-03T13:54:19.653Z",
-      name: "Rustic Metal Gloves",
-      description:
-        "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J",
-      price: "471.00",
-      unitsAvailable: 7,
-      productImage: "https://loremflickr.com/640/480/food",
-      id: "20",
-    },
-    {
-      createdAt: "2023-04-03T14:41:02.813Z",
-      name: "Oriental Plastic Pizza",
-      description:
-        "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
-      price: "298.00",
-      unitsAvailable: 19,
-      productImage: "https://loremflickr.com/640/480/food",
-      id: "21",
-    },
-    {
-      createdAt: "2023-04-04T02:19:45.142Z",
-      name: "",
-      description: "",
-      price: 0,
-      unitsAvailable: 0,
-      productImage: "",
-      id: "22",
-    },
-    {
-      createdAt: "2023-04-04T01:18:37.281Z",
-      name: "",
-      description: "",
-      price: 0,
-      unitsAvailable: 0,
-      productImage: "",
-      id: "23",
-    },
-    {
-      createdAt: "2023-04-09T15:22:11.188Z",
-      name: "Rustic Soft Computer",
-      description:
-        "The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design",
-      price: "146.00",
-      unitsAvailable: 99,
-      productImage: "https://loremflickr.com/640/480/food",
-      id: "24",
-    },
-    {
-      createdAt: "2023-04-09T18:00:29.779Z",
-      name: "Recycled Soft Chips",
-      description:
-        "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
-      price: "6.00",
-      unitsAvailable: 6,
-      productImage: "https://loremflickr.com/640/480/food",
-      id: "25",
-    },
-    {
-      createdAt: "2023-04-09T17:02:48.754Z",
-      name: "Practical Granite Tuna",
-      description:
-        "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
-      price: "109.00",
-      unitsAvailable: 20,
-      productImage: "https://loremflickr.com/640/480/food",
-      id: "26",
-    },
-    {
-      createdAt: "2023-04-10T07:01:02.764Z",
-      name: "Refined Granite Tuna",
-      description:
-        "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit",
-      price: "702.00",
-      unitsAvailable: 98,
-      productImage: "https://loremflickr.com/640/480/food",
-      id: "27",
-    },
-    {
-      createdAt: "2023-04-18T20:42:28.028Z",
-      name: "Small Wooden Sausages",
-      description:
-        "The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design",
-      price: "199.00",
-      unitsAvailable: 43,
-      productImage: "https://loremflickr.com/640/480/food",
-      id: "28",
-    },
-  ];
+// let div = document.createElement("div");
+// document.body.appendChild(div);
 
-//     //filtering all the products
-//     app.get("/products", (req, res) => {
-//         console.log(products);
-//         res.send(products);
-//       });
+// let input1 = document.createElement("input");
+// input1.setAttribute("type", "number");
+// input1.setAttribute("placeholder", "Enter a decimal value");
+// input1.setAttribute("id", "decimalValue");
+// div.appendChild(input1);
 
-//     //filtering the products based on the category alone.
-//   app.get("/products", (req, res) => {
-//     const { category } = req.query;
-//     console.log(req.query);
-//     const result = products.filter((pd) => pd.category == category);
-//     res.send(result);
-//   });
-    
-//   //filtering the products based on the category and price.
-// app.get("/products"),(req,res)=>{
-//     const{category,price}=req.query;
-//     console.log(req.query);
-//     const result=product.filter((pd)=>{
-//         pd.category==category && pd.price==price;
-//     });
-//     res.send(result);
-// }
+// div.appendChild(document.createElement("br"));
 
-//     //filtering the products based on price.
-// app.get("/products"),(req,res)=>{
-//     const{price}=req.query;
-//     console.log(req.query);
-//     const result=product.filter((pd)=>{
-//         pd.price==price;
-//     });
-//     res.send(result);
-// }
+// let input2 = document.createElement("input");
+// input2.setAttribute("type", "number");
+// input2.setAttribute("id", "hexaDecimalValue");
+// div.appendChild(input2);
+
+// div.appendChild(document.createElement("br"));
+
+// let btn = document.createElement("button");
+// let btnName = document.createTextNode("Convert");
+// btn.appendChild(btnName);
+// btn.setAttribute("onclick", "decToHexaDecConversion()");
+// div.appendChild(btn);
+
+// div.appendChild(document.createElement("br"));
+
+// let decToHexaDecConversion = () => {
+//   let decValue = document.getElementById("decimalValue").value;
+//   let num = decValue.split(".");
+//   let result = [];
+//   let remainder = 0;
+//   let quotient = 0;
+//   let i = 0;
+//   if (decValue !== "") {
+//     console.log("decimalValue:", decValue);
+//     console.log("num:", num);
+//     if (num.length == 1) {
+//       //integer calc
+//       while (num[0] / 16 !== 0) {
+//         quotient = Math.floor(num[0] / 16);
+//         result.push(quotient);
+//         console.log("result value:", result);
+//         num[0] = quotient;
+//         i++;
+//         if (num[0] < 16) {
+//           break;
+//         }
+//       }
+//       result.push(0);
+//       console.log("final result value:", result.join(''));
+//     } else {
+//       //floating calc
+//     }
+//   } else {
+//     alert("Enter a decimal number");
+//   }
+//   document.getElementById("hexaDecimalValue").value = result.join('');
+// };
 
 
-const result=product.filter((pd)=>{
-   if(pd.price==price){
-    return pd.price;
-   }
-   else if(price<=500){
-    const result=filteredProducts.filter((prod)=>
-        prod.price<=price)
-    }
-   else{
-    const result=filteredProducts.filter((prod)=>
-        prod.price>=price)
-}
-});
