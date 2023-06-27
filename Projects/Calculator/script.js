@@ -108,6 +108,8 @@ function validateTextBox(event) {
     console.log("ARR in VALIDATE TEXT BOX:", arr);
     console.log("EXP in VALIDATE TEXT BOX:", exp);
   } else {
+    arr=[];
+    exp='';
     let divElem = document.getElementById("output");
     let elem = document.getElementById("result");
     elem.value = "";
