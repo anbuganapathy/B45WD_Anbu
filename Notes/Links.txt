@@ -37,6 +37,9 @@ https://github.com/rvsp/html-CSS
 http://latentflip.com/loupe/
 https://www.freecodecamp.org/news/javascript-callback-functions-what-are-callbacks-in-js-and-how-to-use-them/
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+http://callbackhell.com/
+https://www.w3.org/Style/CSS/Overview.en.html
+https://html.spec.whatwg.org/multipage/
 
 
 

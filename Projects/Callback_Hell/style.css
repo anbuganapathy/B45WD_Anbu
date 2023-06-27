@@ -1,0 +1,17 @@
+body {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+}
+
+p {
+  font-size: x-large;
+  color: green;
+}
+
+#callback_hell{
+    font-size: x-large;
+    color: red;
+}
