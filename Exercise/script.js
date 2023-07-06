@@ -167,17 +167,25 @@
 //   document.getElementById("hexaDecimalValue").value = result.join('');
 // };
 
-let name,age;
-function print(callback){
-    name = prompt("Enter the name:");
-    age = prompt("Enter the age:");
-    callback();
-}
+// let name,age;
+// function print(callback){
+//     name = prompt("Enter the name:");
+//     age = prompt("Enter the age:");
+//     callback();
+// }
 
+// function getDetails(){
+//     console.log(name);
+//     console.log(age);
+// }
 
-function getDetails(){
-    console.log(name);
-    console.log(age);
-}
+// print(getDetails);
 
-print(getDetails);
+fetch("https://jsonplaceholder.typicode.com/users")
+  .then((data) => data.json())
+  .then((res) => {
+    res.forEach((element) => {
+      if (element.name.length > 5) console.log(element.name);
+    });
+  })
+  .catch((err) => console.log("ERROR:", err));
