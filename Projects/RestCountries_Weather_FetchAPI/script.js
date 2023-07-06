@@ -98,8 +98,3 @@ fetch("https://restcountries.com/v3.1/all")
   })
   .catch((err) => console.log("ERROR:", err));
 
-function extractData() {
-  restCountriesData.forEach((element) => {
-    console.log("NAME:", element.name.common);
-  });
-}
